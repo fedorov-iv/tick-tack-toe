@@ -1,12 +1,65 @@
-<!doctype html>
-<html land="en">
-	<head>
-		<meta charset="utf-8">
-		<title>tick-tack-toe</title>
-	</head>
-	<body>
-		
-		
-	</body>
+<!DOCTYPE html>
+<html lang="en" ng-app="TickTackToeApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tick-tack-toe</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
 
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <!--<li role="presentation" class="active"><a href="#"></a></li>-->
+            <!--<li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>-->
+          </ul>
+        </nav>
+        <h3 class="text-muted">Tick-tack-toe</h3>
+      </div>
+
+      <div class="jumbotron" ng-controller="GameController">
+        <h1>Jumbotron heading</h1>
+			{{test}}
+
+			  <table class="table table-bordered">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				  <tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				  <tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+			  </table>
+
+
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Начать игру</a></p>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; 2016 Tick-tack-toe, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  	<script src="bower_components/angular/angular.min.js"></script>
+  	<script src="js/app.js"></script>
+  	<script src="js/controllers/GameController.js"></script>
+  </body>
 </html>
