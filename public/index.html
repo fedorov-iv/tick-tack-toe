@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="TickTackToeApp">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>tick-tack-toe</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  </head>
-  <body>
+</head>
+<body>
 
-	<div class="container">
-      <div class="header clearfix">
+<div class="container">
+    <div class="header clearfix">
         <nav>
-          <ul class="nav nav-pills pull-right">
-            <!--<li role="presentation" class="active"><a href="#"></a></li>-->
-            <!--<li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>-->
-          </ul>
+            <ul class="nav nav-pills pull-right">
+                <!--<li role="presentation" class="active"><a href="#"></a></li>-->
+                <!--<li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>-->
+            </ul>
         </nav>
         <h3 class="text-muted">Tick-tack-toe</h3>
-      </div>
+    </div>
 
-      <div class="jumbotron" ng-controller="GameController">
+    <div class="jumbotron" ng-controller="GameController">
         <h1>Jumbotron heading</h1>
 
-			  <table class="table table-bordered" ng-show="!gameOver">
-				<tr>
-					<td ng-click="move(0)">{{ field[0] }}</td>
-					<td ng-click="move(1)">{{ field[1] }}</td>
-					<td ng-click="move(2)">{{ field[2] }}</td>
-				</tr>
-				  <tr>
-					<td ng-click="move(3)">{{ field[3] }}</td>
-					<td ng-click="move(4)">{{ field[4] }}</td>
-					<td ng-click="move(5)">{{ field[5] }}</td>
-				</tr>
-				  <tr>
-					<td ng-click="move(6)">{{ field[6] }}</td>
-					<td ng-click="move(7)">{{ field[7] }}</td>
-					<td ng-click="move(8)">{{ field[8] }}</td>
-				</tr>
-			  </table>
-		  <p ng-show="gameOver">Игра окончена!</p>
+        <table class="table table-bordered" ng-show="!gameOver">
+            <tr>
+                <td ng-click="move(0)">{{ field[0] }}</td>
+                <td ng-click="move(1)">{{ field[1] }}</td>
+                <td ng-click="move(2)">{{ field[2] }}</td>
+            </tr>
+            <tr>
+                <td ng-click="move(3)">{{ field[3] }}</td>
+                <td ng-click="move(4)">{{ field[4] }}</td>
+                <td ng-click="move(5)">{{ field[5] }}</td>
+            </tr>
+            <tr>
+                <td ng-click="move(6)">{{ field[6] }}</td>
+                <td ng-click="move(7)">{{ field[7] }}</td>
+                <td ng-click="move(8)">{{ field[8] }}</td>
+            </tr>
+        </table>
+        <p ng-show="gameOver">Игра окончена!</p>
 
 
-        <p ng-show="gameOver"> <a class="btn btn-lg btn-success" role="button" ng-click="start()">Начать новую игру</a></p>
+        <p ng-show="gameOver"><a class="btn btn-lg btn-success" role="button" ng-click="reset()">Начать новую игру</a>
+        </p>
 
-      </div>
+    </div>
 
 
-
-      <footer class="footer">
+    <footer class="footer">
         <p>&copy; 2016 Tick-tack-toe, Inc.</p>
-      </footer>
+    </footer>
 
-    </div> <!-- /container -->
+</div> <!-- /container -->
 
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  	<script src="bower_components/angular/angular.min.js"></script>
-  	<script src="js/app.js"></script>
-  	<script src="js/controllers/GameController.js"></script>
-  </body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/GameController.js"></script>
+</body>
 </html>

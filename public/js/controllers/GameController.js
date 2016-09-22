@@ -23,7 +23,7 @@ angular
         };
 
         // start new game
-        $scope.start = function () {
+        $scope.reset = function () {
             $scope.field = [null, null, null, null, null, null, null, null, null];
             $scope.gameOver = false;
         };
@@ -36,20 +36,21 @@ angular
         }
 
         function findEmptyCell() {
-            if(hasEmptyCells()){
+            if (hasEmptyCells()) {
                 var position = Math.floor(Math.random() * 9);
-                $scope.field[position] !== null  ? findEmptyCell() : moveBack(position);
-            }else{
+                $scope.field[position] !== null ? findEmptyCell() : moveBack(position);
+            } else {
                 resume();
             }
 
 
         }
-        // checks field for empty cells
-        function hasEmptyCells(){
 
-            for(var i = 0; i < $scope.field.length; i++){
-                if($scope.field[i] === null){
+        // checks field for empty cells
+        function hasEmptyCells() {
+
+            for (var i = 0; i < $scope.field.length; i++) {
+                if ($scope.field[i] === null) {
                     return true;
                 }
             }
@@ -57,7 +58,7 @@ angular
 
         }
 
-        function resume(){
+        function resume() {
             $scope.gameOver = true;
         }
 
