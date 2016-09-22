@@ -41,7 +41,7 @@
                 <td ng-click="move(8)">{{ field[8] }}</td>
             </tr>
         </table>
-        <p ng-show="gameOver">Игра окончена!</p>
+        <p ng-show="gameOver">Игра окончена! Победил {{ winner }}</p>
 
 
         <p ng-show="gameOver"><a class="btn btn-lg btn-success" role="button" ng-click="reset()">Начать новую игру</a>
