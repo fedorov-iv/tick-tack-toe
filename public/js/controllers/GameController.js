@@ -5,15 +5,16 @@ angular
     .module('TickTackToeApp')
     .controller('GameController', function ($scope) {
 
-
-        // field
-        $scope.field = [null, null, null, null, null, null, null, null, null];
-        $scope.gameOver = false;
+        $scope.field = [null, null, null, null, null, null, null, null, null]; // field
+        $scope.gameOver = false; // state
 
         console.log('Initial field:', $scope.field);
 
 
-        // user's move
+        /**
+         * User's move
+         * @param {int} position
+         */
         $scope.move = function (position) {
 
             $scope.field[position] = 1;
@@ -22,19 +23,27 @@ angular
 
         };
 
-        // start new game
+        /**
+         * Starts a new game
+         */
         $scope.reset = function () {
             $scope.field = [null, null, null, null, null, null, null, null, null];
             $scope.gameOver = false;
         };
 
 
-        //computer's move
+        /**
+         * Computer's move
+         * @param {int} position
+         */
         function moveBack(position) {
             $scope.field[position] = 0;
             console.log('Computer\'s move :', $scope.field);
         }
 
+        /**
+         * Finds an empty cell for computer's move
+         */
         function findEmptyCell() {
             if (hasEmptyCells()) {
                 var position = Math.floor(Math.random() * 9);
@@ -46,7 +55,10 @@ angular
 
         }
 
-        // checks field for empty cells
+        /**
+         * Checks field for empty cells
+         * @returns {bool}
+         */
         function hasEmptyCells() {
 
             for (var i = 0; i < $scope.field.length; i++) {
@@ -58,6 +70,9 @@ angular
 
         }
 
+        /**
+         * Resumes game
+         */
         function resume() {
             $scope.gameOver = true;
         }
