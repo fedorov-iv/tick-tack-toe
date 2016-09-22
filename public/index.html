@@ -23,28 +23,29 @@
 
       <div class="jumbotron" ng-controller="GameController">
         <h1>Jumbotron heading</h1>
-			{{test}}
 
-			  <table class="table table-bordered">
+			  <table class="table table-bordered" ng-show="!gameOver">
 				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
+					<td ng-click="move(0)">{{ field[0] }}</td>
+					<td ng-click="move(1)">{{ field[1] }}</td>
+					<td ng-click="move(2)">{{ field[2] }}</td>
 				</tr>
 				  <tr>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
+					<td ng-click="move(3)">{{ field[3] }}</td>
+					<td ng-click="move(4)">{{ field[4] }}</td>
+					<td ng-click="move(5)">{{ field[5] }}</td>
 				</tr>
 				  <tr>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
+					<td ng-click="move(6)">{{ field[6] }}</td>
+					<td ng-click="move(7)">{{ field[7] }}</td>
+					<td ng-click="move(8)">{{ field[8] }}</td>
 				</tr>
 			  </table>
+		  <p ng-show="gameOver">Игра окончена!</p>
 
 
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Начать игру</a></p>
+        <p ng-show="gameOver"> <a class="btn btn-lg btn-success" role="button" ng-click="start()">Начать новую игру</a></p>
+
       </div>
 
 
