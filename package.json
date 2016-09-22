@@ -12,14 +12,5 @@
     "start": "node server.js"
   },
   "author": "fedorov-iv",
-  "license": "",
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "rules": {
-      "no-alert": "error"
-    }
-  }
+  "license": "MIT"
 }

@@ -1,0 +1,17 @@
+{
+  "name": "tick-tack-toe",
+  "version": "0.0.1",
+  "authors": [
+    "fedorov-iv"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8"
+  },
+  "license": "MIT",
+  "devDependencies": {}
+}
